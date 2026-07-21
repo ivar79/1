@@ -1,0 +1,1 @@
+sed -i 's/<span className="text-stone-700 italic font-light">{order.customerMessage}<\/span>/<span className="text-stone-700 italic font-light whitespace-pre-wrap block">{order.customerMessage}<\/span>/g' src/pages/AdminOrderDetail.tsx

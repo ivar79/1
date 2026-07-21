@@ -1,0 +1,2 @@
+sed -i 's/<div key={idx} className="flex flex-col space-y-6 min-w-\[260px\] md:min-w-0 snap-start h-full">/<div key={idx} onClick={() => { navigate(`\/product\/${item.product.slug}`); setCompareModalOpen(false); }} className="cursor-pointer group flex flex-col space-y-6 min-w-[260px] md:min-w-0 snap-start h-full">/g' src/pages/Products.tsx
+sed -i 's/className="w-full inline-flex justify-center items-center bg-stone-900/className="w-full inline-flex justify-center items-center pointer-events-none bg-stone-900/g' src/pages/Products.tsx

@@ -1,0 +1,3 @@
+sed -i 's/import { Link } from "react-router-dom";/import { Link, useNavigate } from "react-router-dom";/g' src/components/ProductCard.tsx
+sed -i 's/export default function ProductCard({ product, showroomName, categoryName, onCompareToggle, isCompared }: ProductCardProps) {/export default function ProductCard({ product, showroomName, categoryName, onCompareToggle, isCompared }: ProductCardProps) {\n  const navigate = useNavigate();/g' src/components/ProductCard.tsx
+sed -i 's/className={`group flex flex-col bg-white/onClick={(e) => {\n        if ((e.target as HTMLElement).closest("button")) return;\n        navigate(`\/product\/${product.slug}`);\n      }}\n      className={`cursor-pointer group flex flex-col bg-white/g' src/components/ProductCard.tsx

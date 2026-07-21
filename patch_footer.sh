@@ -1,0 +1,5 @@
+sed -i 's/import { Link } from "react-router-dom";/import { Link } from "react-router-dom";\nimport { useState, useEffect } from "react";/g' src/components/Footer.tsx
+sed -i 's/export default function Footer() {/export default function Footer() {\n  const [settings, setSettings] = useState<any>({});\n  useEffect(() => {\n    fetch("\/api\/settings")\n      .then(res => res.json())\n      .then(data => {\n        if (data.success) setSettings(data.settings);\n      })\n      .catch(console.error);\n  }, []);/g' src/components/Footer.tsx
+sed -i 's/خانه مبل؛ تجلی هنر و مهندسی در خلق فضاهای زیستی.               ما مجموعه‌ای از برترین طراحی‌های مبلمان لوکس را برای شما گردآوری کرده‌ایم./{settings.footer_about || "خانه مبل؛ تجلی هنر و مهندسی در خلق فضاهای زیستی. ما مجموعه‌ای از برترین طراحی‌های مبلمان لوکس را برای شما گردآوری کرده‌ایم."}/g' src/components/Footer.tsx
+sed -i 's/تهران، فرمانیه، طبقه همکف، پلاک ۲۴/{settings.contact_address || "تهران، بازار مبل یافت‌آباد غربی، بلوار معلم، ساختمان دیزاین فضا، پلاک ۱۸۰، طبقه ۳"}/g' src/components/Footer.tsx
+sed -i 's/۰۲۱-۲۲۳۳۴۴۵۵/{settings.contact_phone || "۰۲۱-۶۶۵۴۳۲۱۰ \/ ۰۹۱۲۳۴۵۶۷۸۹"}/g' src/components/Footer.tsx

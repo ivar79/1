@@ -1,0 +1,1 @@
+sed -i 's/let finalMessage = customerMessage;/let finalMessage = customerMessage;\n    if (selectedColorVariant) {\n      finalMessage = `[رنگ انتخابی: ${selectedColorVariant.name}]\\n${finalMessage || ""}`;\n    }/g' src/pages/ProductDetail.tsx

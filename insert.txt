@@ -1,0 +1,26 @@
+        {/* Home page settings */}
+        <div className="bg-white p-6 rounded-2xl border border-stone-200/60 shadow-sm space-y-5">
+          <h3 className="text-sm font-bold text-stone-900 border-b border-stone-100 pb-3 flex items-center gap-2">
+            <span className="w-2.5 h-2.5 bg-indigo-500 rounded-full" />
+            <span>تنظیمات صفحه اصلی و فوتر</span>
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-1">
+              <label className="text-xs font-bold text-stone-700">تیتر نشان صفحه اصلی</label>
+              <input type="text" name="home_hero_badge" value={settings.home_hero_badge || ""} onChange={handleChange} className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2 text-sm text-right outline-none focus:border-stone-400 transition-colors" dir="rtl" />
+            </div>
+            <div className="space-y-1">
+              <label className="text-xs font-bold text-stone-700">تیتر اصلی صفحه اصلی</label>
+              <input type="text" name="home_hero_title" value={settings.home_hero_title || ""} onChange={handleChange} className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2 text-sm text-right outline-none focus:border-stone-400 transition-colors" dir="rtl" />
+            </div>
+            <div className="space-y-1 md:col-span-2">
+              <label className="text-xs font-bold text-stone-700">توضیحات صفحه اصلی</label>
+              <textarea name="home_hero_desc" value={settings.home_hero_desc || ""} onChange={handleChange} className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-sm text-right outline-none focus:border-stone-400 transition-colors min-h-[80px]" dir="rtl" />
+            </div>
+            <div className="space-y-1 md:col-span-2">
+              <label className="text-xs font-bold text-stone-700">متن درباره ما در فوتر</label>
+              <textarea name="footer_about" value={settings.footer_about || ""} onChange={handleChange} className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-sm text-right outline-none focus:border-stone-400 transition-colors min-h-[80px]" dir="rtl" />
+            </div>
+          </div>
+        </div>
+
